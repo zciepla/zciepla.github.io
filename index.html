@@ -7,37 +7,72 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <script src="javascripts/main.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/zciepla">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
+
+      <header>
+        <h1>Zciepla.github.io</h1>
+        <p></p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/zciepla" class="button fork"><strong>View On GitHub</strong></a>
+      </div><!-- end banner -->
 
     <div class="wrapper">
-
+      <nav>
+        <ul></ul>
+      </nav>
       <section>
-        <div id="title">
-          <h1>Zciepla.github.io</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/zciepla">zciepla</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+        <h1>
+<a name="binbash" class="anchor" href="#binbash"><span class="octicon octicon-link"></span></a>!/bin/bash</h1>
 
-        <p>Na zaliczenie laborek.</p>
+<p>for nazwa in <code>ls</code>
+do 
+    echo "$0"
+    echo "$nazwa"
+if [ $nazwa != <code>basename $0</code> ]</p>
+
+<p>then
+    cp $nazwa $nazwa"_old"
+fi</p>
+
+<p>done 
+exit 0</p>
+
+<h1>
+<a name="binbash-1" class="anchor" href="#binbash-1"><span class="octicon octicon-link"></span></a>!/bin/bash</h1>
+
+<p>echo "czy został podany jeden parametr?"
+if [ $# -eq 1 ];
+then 
+        echo "tak"</p>
+
+<p>if [ -d $1 ];
+then 
+    echo "$1 jest katalogiem"
+elif [ -f $1 ];
+then
+    echo "$1 jest plikiem"</p>
+
+<p>fi </p>
+
+<p>else 
+    echo "zła liczba parametrów"
+fi
+exit 0</p>
       </section>
-
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     

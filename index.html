@@ -27,45 +27,44 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>Blachblach</p>
+        <h1>
+<a name="skrypty-" class="anchor" href="#skrypty-"><span class="octicon octicon-link"></span></a>SKRYPTY #</h1>
 
-<h1>
-<a name="binbash" class="anchor" href="#binbash"><span class="octicon octicon-link"></span></a>!/bin/bash</h1>
+<p>Skrypt zmieniający nazwę - dopisuje sufiks postaci "_old"</p>
 
-<p>for nazwa in <code>ls</code>
-do 
-    echo "$0"
-    echo "$nazwa"
-if [ $nazwa != <code>basename $0</code> ]</p>
+<pre><code>#!/bin/bash
+for nazwa in `ls`
+ do
+   echo "$0"
+   echo "$nazwa"
+        if [ $nazwa != `basename $0` ]
+        then
+        cp $nazwa $nazwa"_old"
+        fi
+ done
+exit 0
+</code></pre>
 
-<p>then
-    cp $nazwa $nazwa"_old"
-fi</p>
+<p>Skrypt sprawdzający czy został podany parametr i czym on jest(plikiem czy katalogiem).</p>
 
-<p>done 
-exit 0</p>
-
-<h1>
-<a name="binbash-1" class="anchor" href="#binbash-1"><span class="octicon octicon-link"></span></a>!/bin/bash</h1>
-
-<p>echo "czy został podany jeden parametr?"
+<pre><code>#!/bin/bash
+echo "czy został podany jeden parametr?"
 if [ $# -eq 1 ];
 then 
-        echo "tak"</p>
+     echo "tak"
 
-<p>if [ -d $1 ];
+if [ -d $1 ];
 then 
-    echo "$1 jest katalogiem"
-elif [ -f $1 ];
-then
-    echo "$1 jest plikiem"</p>
-
-<p>fi </p>
-
-<p>else 
-    echo "zła liczba parametrów"
+echo "$1 jest katalogiem"
+        elif [ -f $1 ];
+        then
+        echo "$1 jest plikiem"
+        fi 
+else 
+ echo "zła liczba parametrów"
 fi
-exit 0</p>
+exit 0
+</code></pre>
       </section>
     </div>
 
